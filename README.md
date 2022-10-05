@@ -19,8 +19,8 @@ locals = {
 }
 
 module "agents" {
-  source            = "glenngillen/ec2-agent-pool/module"
-  version           = "1.0.0"
+  source            = "glenngillen/ec2-agent-pool/aws"
+  version           = "1.0.1"
 
   org_name          = local.tfc_org_name
   name              = local.agents_name
@@ -28,8 +28,8 @@ module "agents" {
 }
 
 module "agent-scaler" {
-  source            = "glenngillen/ec2-agent-pool-autoscaler/module"
-  version           = "1.0.0"
+  source            = "glenngillen/ec2-agent-pool-autoscaler/aws"
+  version           = "1.0.1"
 
   org_name          = local.tfc_org_name
   name              = local.agents_name
